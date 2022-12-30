@@ -14,40 +14,27 @@ struct Node {
     }
 };
 
-
-// } Driver Code Ends
-/* Structure of the linked list node is as
-struct Node 
-{
-    int data;
-    struct Node* next;
-    Node(int x) { data = x;  next = NULL; }
-};
-*/
-
-
 class Solution{
   public:
     //Function to sort the given linked list using Merge Sort.
+    
     int list_length(Node* head){
         int len = 0;
-        for(auto node = head; node != NULL; node = node->next){
-            len++;
-        }
+        for(auto node = head; node != NULL; node = node->next){ len++; }
         return len;
     }
+    
     Node* mergeSort(Node* head) {
         int len = list_length(head);
         return mergesort(head, len);
     }
     Node* mergesort(Node* head, int len){
        if(len == 1 ){return head;}
-       
         Node *left = head, *right= head;
         Node *saved;
-        
+     
         int mid = len/2 + len%2;
-        
+      
         for(int i = 0; i < mid; i ++){
             if (i == mid-1){saved =right;}
             right = right->next;
@@ -56,7 +43,6 @@ class Solution{
   
         left = mergesort(left, mid);
         right = mergesort(right, len/2);
-        
         return merge(left,right);
         
     }
@@ -89,7 +75,6 @@ class Solution{
         return merged;
     }
 };
-
 
 //{ Driver Code Starts.
 
