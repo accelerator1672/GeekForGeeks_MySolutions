@@ -1,3 +1,5 @@
+//https://practice.geeksforgeeks.org/problems/remove-loop-in-linked-list/1?page=1&difficulty[]=1&difficulty[]=2&category[]=Linked%20List&sortBy=submissions
+
 //{ Driver Code Starts
 // driver code
 
