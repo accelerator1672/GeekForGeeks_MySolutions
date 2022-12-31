@@ -56,22 +56,7 @@ int length(Node* head)
 
 
 // } Driver Code Ends
-/*
-structure of linked list node:
 
-struct Node
-{
-    int data;
-    Node* next;
-    
-    Node(int val)
-    {
-        data = val;
-        next = NULL;
-    }
-};
-
-*/
 
 class Solution
 {
