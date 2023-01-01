@@ -1,5 +1,3 @@
-//https://practice.geeksforgeeks.org/problems/remove-loop-in-linked-list/1?page=1&difficulty[]=1&difficulty[]=2&category[]=Linked%20List&sortBy=submissions
-
 //{ Driver Code Starts
 // driver code
 
@@ -56,7 +54,6 @@ int length(Node* head)
     return ret;
 }
 
-
 // } Driver Code Ends
 
 
@@ -68,15 +65,28 @@ class Solution
     {
         // code here
         // just remove the loop without losing any nodes
-        Node* prev = head, *current = head->next;
-        while(current != NULL){
-           if(current <=prev){
-               prev->next = NULL;
+       Node *fast = head, *slow = head, *saved;
+       bool cycle = false;
+       
+       while(fast != NULL && fast->next != NULL){
+           saved = slow;
+           fast = fast->next->next;
+           slow = slow->next;
+           if(fast == slow){
+               slow = head; 
+               cycle = true;
                break;
            }
-           prev = current;
-           current = current->next;
-        }
+       }
+       if(!cycle){return;}
+       if(fast == head){saved ->next = NULL; return;}
+       while(slow != fast){
+           saved = fast;
+           fast = fast->next;
+           slow = slow->next;
+       }
+       saved->next = NULL;
+   
     }
 };
 
