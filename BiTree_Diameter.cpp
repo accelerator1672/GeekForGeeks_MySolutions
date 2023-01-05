@@ -1,3 +1,6 @@
+// https://practice.geeksforgeeks.org/problems/diameter-of-binary-tree/1?page=1&difficulty[]=1&difficulty[]=2&category[]=Tree&sortBy=submissions
+
+/* Tree node structure  used in the program
 struct Node
 {
     int data;
