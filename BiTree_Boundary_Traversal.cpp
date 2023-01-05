@@ -1,9 +1,5 @@
 // https://practice.geeksforgeeks.org/problems/boundary-traversal-of-binary-tree/1?page=1&difficulty[]=1&difficulty[]=2&category[]=Tree&sortBy=submissions
 
-#include <bits/stdc++.h>
-using namespace std;
-#define MAX_HEIGHT 100000
-
 /* A binary tree Node
 struct Node
 {
