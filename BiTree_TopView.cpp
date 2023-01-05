@@ -1,3 +1,6 @@
+//https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1?page=1&difficulty[]=1&difficulty[]=2&category[]=Tree&sortBy=submissions
+
+/*
 struct Node
 {
     int data;
@@ -5,6 +8,7 @@ struct Node
     Node* right;
 };
 */
+
 class Solution
 {
     public:
