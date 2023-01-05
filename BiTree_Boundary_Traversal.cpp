@@ -13,6 +13,7 @@ struct Node
 
 class Solution {
 public:
+    
     void left_boundary(Node *node, vector<int> &list){
         if(!node->left && !node->right){return;}
 
@@ -22,6 +23,7 @@ public:
         else{left_boundary(node->right, list);}
         
     }
+    
     void leaf_nodes (Node* node, vector<int> &list){
         if(!node->left && !node->right){
             list.push_back(node->data);
@@ -29,9 +31,8 @@ public:
         
         if(node->left){leaf_nodes(node->left, list);}
         if(node->right){leaf_nodes(node->right, list);}
-        
-        
     }
+    
     void right_boundary (Node* node, vector <int> &list){
         if(!node->left && !node->right){return;}
         
@@ -39,17 +40,16 @@ public:
         else{right_boundary(node->left, list);}
         
         list.push_back(node->data);
-        
     }
-    vector <int> boundary(Node *root)
-    {
+    
+    vector <int> boundary(Node *root){
+        
         vector<int> list;
         list.push_back(root->data);
         if(root ->left){left_boundary(root->left, list);}
         if(root->left || root->right){leaf_nodes(root, list);}
         if(root -> right){right_boundary(root->right, list);}
 
-        
         return list;
     }
 };
