@@ -16,8 +16,6 @@ class Solution
     //from left to right in Binary Tree.
     void map_insert(Node * node, int angle, int level, map<int,int> &mp, map<int,int> &node_level){
       
-        if(node == NULL){return;}
-        
         if(!mp[angle]){mp[angle] = node->data; node_level[angle] = level;}
         else{
             if(level < node_level[angle]){
