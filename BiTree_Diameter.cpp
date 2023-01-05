@@ -19,7 +19,6 @@ class Solution {
 
     int weight(Node* node, int * ptr){
         int l = 0 , r = 0;
-        if(node == NULL){return 0;}
         
         if(node -> left){l = 1 + weight(node->left, ptr);}
         if(node -> right){r = 1 + weight(node->right, ptr);}
