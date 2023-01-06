@@ -14,7 +14,6 @@ struct Node
     }
 }; */
 
-
 //Function to return a list containing the level order traversal in spiral form.
 void tag_level(Node *node, int level, map<Node*, int> &node_level){
     node_level[node] = level;
@@ -31,14 +30,13 @@ vector<int> findSpiral(Node *root)
     map<int,vector<int>> mymap;
     queue <Node*> myqueue;
     Node* node;
+   
     tag_level(root, 0, node_level);
-
     myqueue.push(root);
 
     while(!myqueue.empty()){
         node = myqueue.front();
         mymap[node_level[node]].push_back(node->data);
-
         myqueue.pop();
         if(node->left){myqueue.push(node->left);}
         if(node->right){myqueue.push(node->right);}
