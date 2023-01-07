@@ -4,7 +4,7 @@ class Solution
 {
     public:
     //Function to find the vertical order traversal of Binary Tree.
-    int tag_angle(Node * node, int angle, int *ptr1, int *ptr2, unordered_map<Node*, int> &node_angle){
+    int tag_angle(Node *node, int angle, int *ptr1, int *ptr2, unordered_map <Node*,int> &node_angle){
         node_angle[node] = angle;
         
         if(angle < *ptr1){*ptr1 = angle;}
