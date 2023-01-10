@@ -1,17 +1,12 @@
 //https://practice.geeksforgeeks.org/problems/connect-nodes-at-same-level/1
 
-struct Node
+/* struct Node
 {
-    int data;
-    struct Node* left;
-    struct Node* right;
-    
-    Node(int x){
-        data = x;
-        left = right = NULL;
-    }
-};
- */
+  int data;
+  Node *left,  *right;
+  Node *nextRight;  // This has garbage value in input trees
+}; */
+;
 
 class Solution
 {
