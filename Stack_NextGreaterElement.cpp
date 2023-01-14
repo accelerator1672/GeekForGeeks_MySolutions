@@ -6,22 +6,22 @@ class Solution
     //Function to find the next greater element for each element of the array.
     vector<long long> nextLargerElement(vector<long long> arr, int n){
         
-        stack<int> st1, st2;
+        stack<int> st;
         vector<long long> result(n, -1);
         int index;
         
-        st1.push(0);
+        st.push(0);
         
         for(int i = 1; i < n; i ++){
             
-            while(!st1.empty() && arr[i] > arr[index = st1.top()]){
+            while(!st.empty() && arr[i] > arr[index = st.top()]){
                 
                 result[index] = arr[i];
-                st1.pop();
+                st.pop();
                 
             }
             
-            st1.push(i);
+            st.push(i);
         }
         
         return result;
