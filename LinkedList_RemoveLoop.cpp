@@ -23,6 +23,7 @@ class Solution
        }
        if(!cycle){return;}
        if(fast == head){saved ->next = NULL; return;}
+        
        while(slow != fast){
            saved = fast;
            fast = fast->next;
