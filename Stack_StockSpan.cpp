@@ -1,9 +1,9 @@
-//https://practice.geeksforgeeks.org/problems/stock-span-problem-1587115621/1?page=1&difficulty[]=1&difficulty[]=2&category[]=Stack&sortBy=submissions
+//https://practice.geeksforgeeks.org/problems/stock-span-problem-1587115621/1
 
 class Solution
 {
     public:
-    //Function to calculate the span of stockâ€™s price for all n days.
+    
     vector <int> calculateSpan(int price[], int n)
     {
        vector<int> result;
