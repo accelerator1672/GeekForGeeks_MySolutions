@@ -9,7 +9,9 @@ public:
        if(len <=1 ){return s;}
        
        while( i < len){
+      
            if(s[i] == s[i-1]){
+               
                if(!changed){changed = 1;}
                
                if(i < len-1 && s[i] == s[i+1]){
@@ -23,7 +25,7 @@ public:
            else{ i++; }
        }
        
-       if(changed){return remove(s,1);}
+       if(changed){ return remove(s,1); }
       
        return s;
     }
