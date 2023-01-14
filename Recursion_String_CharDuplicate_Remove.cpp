@@ -1,8 +1,8 @@
-class Solution{
+//https://practice.geeksforgeeks.org/problems/recursively-remove-all-adjacent-duplicates0744/1
+
 public:
-
     string remove(string s, int n){
-
+        
        int len = s.length(), i = 1;
        bool changed = 0;
        
