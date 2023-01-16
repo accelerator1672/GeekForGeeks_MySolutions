@@ -3,15 +3,15 @@
 class Solution {
   public:
     // Function to detect cycle in an undirected graph.
-    bool dfs(int k, int parent, vector<int> adj[], vector<int> &visited){
+    bool dfs(int k, int p, vector<int> adj[], vector<int> &visited){
         
         visited[k] = 1;
         bool cycle = 0;
         
-        for(auto i : adj[k]){
+        for(auto v : adj[k]){
             
-            if(!visited[i]) cycle = dfs(i, k, adj, visited);
-            else if(i != parent){return 1;}
+            if(!visited[v]) cycle = dfs(v, k, adj, visited);
+            else if(v != p){return 1;}
             
             if(cycle){return 1;}
             
